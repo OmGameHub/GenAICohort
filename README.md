@@ -66,3 +66,17 @@ Example usage:
 🔨 Tool Called: get_weather London
 🤖: The weather in London is Partly cloudy +15°C.
 ```
+
+#### 5. **Ollama API Server**: A FastAPI wrapper for serving Ollama LLM responses.
+- Provides a simple REST API to interact with locally running Ollama models
+- Uses the gemma3:1b model for generating responses
+
+To run the Ollama API server:
+```bash
+docker compose up
+```
+
+To run the API server:
+```bash
+uvicorn ollaama_api:app --port 8000
+```
