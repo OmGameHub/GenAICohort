@@ -80,3 +80,24 @@ To run the API server:
 ```bash
 uvicorn ollaama_api:app --port 8000
 ```
+
+#### 6. **Chat AI with Memory**: An implementation of a chat AI with persistent memory using Vector and Graph databases.
+- Uses OpenAI GPT-4.1 for generating responses
+- Stores conversation history and memories in Qdrant (vector store) and Neo4j (graph store)
+- Enhances responses with contextual awareness based on previous conversations
+
+To run the Qdrant and Neo4j servers:
+```bash
+docker compose -f docker-compose.graph.yml up
+```
+
+Now run the chat AI with memory:
+```bash
+python chat_ai_with_memory.py
+```
+
+Example usage:
+```
+You:>> My name is Om Prakash Pandey and I work as a software engineer.
+ChatGPT:>> Hello Om Prakash Pandey! It's nice to meet you. I see you're a software engineer. What kind of development do you specialize in?
+```
